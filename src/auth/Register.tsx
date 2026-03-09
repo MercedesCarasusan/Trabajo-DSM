@@ -30,9 +30,11 @@ const Register = () => {
       )
       .then((response) => {
         console.log(response.data)
+        alert("Usuario registrado correctamente")
         authContext.login(
           response.data.idToken,
-          response.data.localId
+          response.data.localId,
+          response.data.email
         )
 
       })

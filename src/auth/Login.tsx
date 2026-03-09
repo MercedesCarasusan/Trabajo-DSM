@@ -33,7 +33,8 @@ const Login = () => {
         alert("Login correcto")
         authContext.login(
           response.data.idToken,
-          response.data.localId
+          response.data.localId,
+          response.data.email
         )
       })
       .catch((error) => {
