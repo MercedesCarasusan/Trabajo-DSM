@@ -69,7 +69,31 @@ const MoviesService = (repository: MovieRepository) => {
       await repository.update(movie.id, updatedMovie, token)
     },
 
+    addFavorite: async (
+      userId: string,
+      movieId: string,
+      token: string
+    ): Promise<void> => {
+
+      await repository.addFavorite(userId, movieId, token)
+
+    },
+
+    getFavorites: async (userId: string): Promise<string[]> => {
+
+      return await repository.getFavorites(userId)
+
+    },
+
+    removeFavorite: async (
+      userId: string,
+      movieId: string,
+      token: string
+    ): Promise<void> => {
+
+      await repository.removeFavorite(userId, movieId, token)
+
+    },
   }
 }
-
 export default MoviesService(Repository)

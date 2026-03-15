@@ -79,6 +79,40 @@ const FirebaseMovieRepository: MovieRepository = {
             movie
         )
     },
+
+    addFavorite: async (
+        userId: string,
+        movieId: string,
+        token: string
+    ): Promise<void> => {
+
+        await axios.put(
+            `${BASE_URL}/favorites/${userId}/${movieId}.json?auth=${token}`,
+            true
+        )
+
+    },
+
+    getFavorites: async (userId: string): Promise<string[]> => {
+
+        const response = await axios.get(
+            `${BASE_URL}/favorites/${userId}.json`
+        )
+
+        const data = response.data
+        if (!data) return []
+        return Object.keys(data)
+    },
+
+    removeFavorite: async (
+        userId: string,
+        movieId: string,
+        token: string
+    ): Promise<void> => {
+        await axios.delete(
+            `${BASE_URL}/favorites/${userId}/${movieId}.json?auth=${token}`
+        )
+    },
 }
 
 export default FirebaseMovieRepository
