@@ -1,4 +1,47 @@
 body {
   margin: 0;
   font-family: system-ui, Avenir, Helvetica, Arial, sans-serif;
+  background: linear-gradient(180deg,#0f172a,#1e293b);
+  min-height: 100vh;
+  color: #f1f5f9;
+}
+
+/* títulos */
+h1,h2,h3 {
+  font-weight: 600;
+}
+
+/* contenedor general */
+.container {
+  margin-top: 30px;
+}
+
+/* cards */
+.card {
+  background-color: #1e293b;
+  border: none;
+  color: #f1f5f9;
+}
+
+/* botones */
+.btn-primary {
+  background-color: #2563eb;
+  border: none;
+}
+
+.btn-primary:hover {
+  background-color: #1d4ed8;
+}
+
+/* inputs */
+.form-control,
+.form-select {
+  background-color: #1e293b;
+  color: white;
+  border: 1px solid #334155;
+}
+
+.form-control:focus {
+  background-color: #1e293b;
+  color: white;
 }
