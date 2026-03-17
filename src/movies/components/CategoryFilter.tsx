@@ -1,4 +1,5 @@
-import { Form } from "react-bootstrap"
+/* import { Form } from "react-bootstrap"
+import "./categoryFilter.css"
 
 interface Props {
   categories: string[]
@@ -34,6 +35,53 @@ const CategoryFilter = ({
       </Form.Select>
 
     </Form.Group>
+  )
+}
+
+export default CategoryFilter */
+
+import { Form } from "react-bootstrap"
+
+import "./categoryFilter.css"
+
+interface Props {
+  categories: string[]
+  selectedCategory: string
+  onChange: (category: string) => void
+}
+
+const CategoryFilter = ({
+  categories,
+  selectedCategory,
+  onChange,
+}: Props) => {
+
+  return (
+
+    <Form.Group className="category-filter">
+
+      <Form.Label className="filter-label">
+        Filtrar por categoría
+      </Form.Label>
+
+      <Form.Select
+        className="filter-select"
+        value={selectedCategory}
+        onChange={(e) => onChange(e.target.value)}
+      >
+
+        <option value="">Todas</option>
+
+        {categories.map((category) => (
+          <option key={category} value={category}>
+            {category}
+          </option>
+        ))}
+
+      </Form.Select>
+
+    </Form.Group>
+
   )
 }
 

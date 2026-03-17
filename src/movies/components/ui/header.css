@@ -1,0 +1,42 @@
+.main-navbar {
+  background-color: #0f0f0f;
+  padding: 12px 0;
+  border-bottom: 1px solid #1f1f1f;
+}
+
+/* logo */
+
+.logo {
+  font-size: 1.4rem;
+  font-weight: 700;
+  color: white !important;
+
+  transition: transform 0.25s ease;
+}
+
+.logo:hover {
+  transform: scale(1.15);
+}
+/* links */
+
+.nav-links .nav-link {
+  color: #ddd !important;
+  font-weight: 500;
+  margin-right: 10px;
+  transition: color 0.2s ease;
+}
+
+.nav-links .nav-link:hover {
+  color: #e50914 !important;
+}
+
+/* usuario */
+
+.nav-user .nav-link {
+  color: #ddd !important;
+}
+
+.username {
+  color: #bbb;
+  margin-right: 15px;
+}

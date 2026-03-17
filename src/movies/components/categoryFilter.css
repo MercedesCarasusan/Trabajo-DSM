@@ -1,0 +1,29 @@
+.category-filter {
+  margin-bottom: 1.5rem;
+  max-width: 280px;
+}
+
+.filter-label {
+  color: #e5e5e5;
+  font-weight: 500;
+  margin-bottom: 6px;
+}
+
+.filter-select {
+  background-color: #1f1f1f;
+  color: white;
+  border: 1px solid #333;
+  border-radius: 8px;
+  padding: 8px 12px;
+
+  transition: all 0.2s ease;
+}
+
+.filter-select:focus {
+  border-color: #e50914;
+  box-shadow: 0 0 0 0.15rem rgba(229, 9, 20, 0.4);
+}
+
+.filter-select:hover {
+  border-color: #555;
+}

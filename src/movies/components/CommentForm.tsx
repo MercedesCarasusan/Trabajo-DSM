@@ -1,4 +1,4 @@
-import { useState } from "react"
+/* import { useState } from "react"
 import { Form, Button } from "react-bootstrap"
 
 interface Props {
@@ -36,6 +36,55 @@ const CommentForm = ({ onAddComment }: Props) => {
       </Form.Group>
 
       <Button type="submit" style={{ marginTop: "10px" }}>
+        Comentar
+      </Button>
+
+    </Form>
+  )
+}
+
+export default CommentForm */
+
+import { useState } from "react"
+import { Form, Button } from "react-bootstrap"
+import "./commentForm.css"
+
+interface Props {
+  onAddComment: (text: string) => void
+}
+
+const CommentForm = ({ onAddComment }: Props) => {
+
+  const [text, setText] = useState<string>("")
+
+  const submitHandler = (e: React.FormEvent<HTMLFormElement>) => {
+
+    e.preventDefault()
+
+    if (!text.trim()) return
+
+    onAddComment(text)
+
+    setText("")
+  }
+
+  return (
+
+    <Form onSubmit={submitHandler} className="comment-form">
+
+      <Form.Group>
+
+        <Form.Control
+          type="text"
+          placeholder="Escribe un comentario..."
+          value={text}
+          onChange={(e) => setText(e.target.value)}
+          className="comment-input"
+        />
+
+      </Form.Group>
+
+      <Button type="submit" className="comment-button">
         Comentar
       </Button>
 
