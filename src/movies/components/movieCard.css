@@ -1,35 +1,3 @@
-/* .card {
-  position: relative;
-  overflow: hidden;
-  border-radius: 10px;
-  cursor: pointer;
-  transition: transform 0.3s ease;
-}
-
-
-.card:hover {
-  transform: scale(1.05);
-  z-index: 2;
-}
-
-.poster-container {
-  position: relative;
-  overflow: hidden;
-  border-radius: 10px;
-  cursor: pointer;
-  transition: transform 0.3s ease;
-}
-.poster-container:hover{
-  transform: scale(1.05);
-  z-index: 2;
-}
-
-.poster-img {
-  width: 100%;
-  height: 100%;
-  object-fit: cover;
-} */
-
 .movie-card {
   width: 14rem;
   margin: 0.8rem;
