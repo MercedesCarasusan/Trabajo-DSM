@@ -3,12 +3,14 @@ import axios from "axios"
 import { AuthContext } from "./AuthContext"
 
 import { Form, Button, Container, Row, Col } from "react-bootstrap"
+import { useNavigate } from "react-router"
 
 const API_KEY = "AIzaSyBvbA1ikAY0fis4xW25zudtm-os6ish-Zs"
 
 const Login = () => {
 
   const authContext = useContext(AuthContext)
+  const navigate = useNavigate()
 
   const [email, setEmail] = useState<string>("")
   const [password, setPassword] = useState<string>("")
@@ -36,6 +38,9 @@ const Login = () => {
           response.data.localId,
           response.data.email
         )
+        setTimeout(() => {
+          navigate("/")
+        }, 500)
       })
       .catch((error) => {
         console.log(error)
